@@ -6,5 +6,6 @@ package bpm.model;
 public class Event {
     double latitude;
     double longitude;
+    String name;
 
 }
