@@ -1,12 +1,14 @@
 package bpm.togol;
 
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -21,7 +23,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import bpm.service.EventoService;
 
-public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MainActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
 
@@ -67,7 +69,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng point4 = new LatLng(-18.895410, -48.284324);
 
         mMap.addMarker(new MarkerOptions().position(point1).title("Amistoso Internacional").snippet("Buffalo Bills X New England Patriots\n22:00").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_footbal)));
-        mMap.addMarker(new MarkerOptions().position(point2).title("Copa Futel de Futsal").snippet("JuntoMisturados X Roosevelt\n19:00").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_soccer)));
+        mMap.addMarker(new MarkerOptions().position(point2). title("Copa Futel de Futsal").snippet("JuntoMisturados X Roosevelt\n19:00").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_soccer)));
         mMap.addMarker(new MarkerOptions().position(point3).title("Campeonato Mineiro de Futebol").snippet("Boa Esporte X Uberlandia\n20:00").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_soccer)));
         mMap.addMarker(new MarkerOptions().position(point4).title("Copa Uberlandense de Volei").snippet("Poderosas X MiniSaia\n18:00").icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_volei)));
         mMap.setInfoWindowAdapter(new GoogleMap.InfoWindowAdapter() {
@@ -94,8 +96,21 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 snippet.setText(marker.getSnippet());
                 snippet.setGravity(Gravity.CENTER);
 
+                Button button = new Button(getBaseContext());
+                button.setText("Ver evento");
+                button.setClickable(true);
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println("Passei aqui");
+                        Intent eventScreen = new Intent(getBaseContext(), EventScreen.class);
+                        startActivity(eventScreen);
+                    }
+                });
+
                 info.addView(title);
                 info.addView(snippet);
+                info.addView(button);
 
                 return info;
             }
@@ -107,5 +122,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         FragmentManager fm = getFragmentManager();
         DialogFragmentInicial dialogFragment = new DialogFragmentInicial();
         dialogFragment.show(fm, "Sample Fragment");
+    }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+//        Intent eventScreen = new Intent(getBaseContext(), EventScreen.class);
+//        startActivity(eventScreen);
+        System.out.println("Passei por aqui");
+
+        return false;
     }
 }
