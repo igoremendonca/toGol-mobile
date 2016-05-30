@@ -35,7 +35,10 @@ public class Splash extends Activity {
             public void onAnimationEnd(Animation animation) {
                 image.setAnimation(animation2);
                 finish();
+                Bundle args = new Bundle();
+                args.putString("key", "value");
                 Intent main = new Intent(getBaseContext(), MainActivity.class);
+                main.putExtra("key", "value");
                 startActivity(main);
             }
 

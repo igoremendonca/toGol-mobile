@@ -49,9 +49,6 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </android.support.design.widget.TextInputLayout>
 
-
-
-
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
