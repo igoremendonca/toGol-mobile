@@ -3,20 +3,20 @@ package bpm.repository;
 import java.util.ArrayList;
 import java.util.List;
 
-import bpm.model.Event;
+import bpm.model.EventLocation;
 
 /**
  * Created by Igor on 28/04/2016.
  */
 public class EventRepository {
 
-    public List<Event> findEventsByLocation(double latitude, double longitude) {
+    public List<EventLocation> findEventsByLocation(double latitude, double longitude) {
         return getEvents();
     }
 
-    private List<Event> getEvents() {
-        List<Event> eventList = new ArrayList<>();
+    private List<EventLocation> getEvents() {
+        List<EventLocation> eventLocationList = new ArrayList<>();
 
-        return eventList;
+        return eventLocationList;
     }
 }
