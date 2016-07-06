@@ -8,6 +8,14 @@ public class Team {
     private String name;
     private Sport sport;
 
+    public Team() {
+    }
+
+    public Team(String name, Sport sport) {
+        this.name = name;
+        this.sport = sport;
+    }
+
     public String getName() {
         return name;
     }

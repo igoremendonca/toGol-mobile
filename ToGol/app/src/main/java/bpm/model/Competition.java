@@ -1,5 +1,7 @@
 package bpm.model;
 
+import java.util.List;
+
 /**
  * Created by igor on 31/05/16.
  */
@@ -7,6 +9,7 @@ public class Competition {
 
     private Sport sport;
     private String name;
+//    private List<Event> events;
 
     public Competition() {}
 
@@ -30,4 +33,12 @@ public class Competition {
     public void setName(String name) {
         this.name = name;
     }
+
+//    public List<Event> getEvents() {
+//        return events;
+//    }
+//
+//    public void setEvents(List<Event> events) {
+//        this.events = events;
+//    }
 }

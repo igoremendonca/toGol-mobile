@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -34,100 +35,19 @@
         android:layout_height="wrap_content"
         android:id="@+id/teams"
         android:layout_gravity="center"
-        android:text="Times"
+        android:text="@string/equipes"
         android:layout_marginBottom="30dp"/>
 
-    <!--<RelativeLayout-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content">-->
+    <LinearLayout
+        android:id="@+id/eventsLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="vertical"-->
-            <!--android:layout_alignParentLeft="true"-->
-            <!--android:layout_marginLeft="10dp">-->
+        <include layout="@layout/item_team"
+            android:visibility="gone"
+            tools:visibility="visible" />
 
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:text="Logo Time 1"-->
-                <!--android:layout_marginBottom="10dp"/>-->
-
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:text="Nome Time 1"-->
-                <!--android:layout_marginBottom="10dp"/>-->
-
-
-        <!--</LinearLayout>-->
-
-        <!--<LinearLayout-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:orientation="vertical"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:layout_marginRight="10dp">-->
-
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:text="Logo Time 2"-->
-                <!--android:layout_marginBottom="10dp"/>-->
-
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent"-->
-                <!--android:text="Nome Time 2"-->
-                <!--android:layout_marginBottom="10dp"/>-->
-
-        <!--</LinearLayout>-->
-
-    <!--</RelativeLayout>-->
-
-    <!--<RelativeLayout-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content">-->
-
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:id="@+id/primeiroText"-->
-            <!--android:text="Primeiro Componente"-->
-            <!--android:layout_marginLeft="40dp"-->
-            <!--android:layout_marginTop="40dp"-->
-            <!--android:drawableBottom="@drawable/ic_soccer"/>-->
-
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:id="@+id/segundoText"-->
-            <!--android:text="Segundo Componente"-->
-            <!--android:layout_alignLeft="@id/primeiroText"-->
-            <!--android:layout_alignParentBottom="true"-->
-            <!--android:drawableBottom="@drawable/ic_volei"-->
-            <!--android:layout_marginBottom="40dp"/>-->
-
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:id="@+id/terceitoText"-->
-            <!--android:text="Terceiro Componente"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:layout_alignTop="@id/primeiroText"-->
-            <!--android:drawableBottom="@drawable/ic_footbal"-->
-            <!--android:layout_marginRight="40dp"/>-->
-
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:id="@+id/quartoText"-->
-            <!--android:text="Quarto Compoente"-->
-            <!--android:layout_alignRight="@id/terceitoText"-->
-            <!--android:layout_alignBottom="@+id/segundoText"-->
-            <!--android:drawableBottom="@drawable/ic_togol"/>-->
-
-    <!--</RelativeLayout>-->
+    </LinearLayout>
 
 </LinearLayout>

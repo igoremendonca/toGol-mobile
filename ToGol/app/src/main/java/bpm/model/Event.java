@@ -10,12 +10,25 @@ public class Event {
 
     private Competition competition;
     private Date date;
-    private List<Team> teams;
+    private EventLocation eventLocation;
+    private List<Game> games;
 
     public Event() {}
 
-    public Event(Competition competition) {
-        this.competition = competition;
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public EventLocation getEventLocation() {
+        return eventLocation;
+    }
+
+    public void setEventLocation(EventLocation eventLocation) {
+        this.eventLocation = eventLocation;
     }
 
     public Competition getCompetition() {
@@ -26,19 +39,11 @@ public class Event {
         this.competition = competition;
     }
 
-    public List<Team> getTeams() {
-        return teams;
+    public List<Game> getGames() {
+        return games;
     }
 
-    public void setTeams(List<Team> teams) {
-        this.teams = teams;
-    }
-
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
+    public void setGames(List<Game> games) {
+        this.games = games;
     }
 }
