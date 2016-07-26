@@ -14,8 +14,6 @@ public class Splash extends Activity {
 
     ImageView image;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

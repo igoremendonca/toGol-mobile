@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ToGol</string>
     <string name="title_activity_main">ToGol</string>
-    <string name="place">Lugar</string>
+    <string name="place">Cidade</string>
     <string name="sport">Esporte</string>
     <string name="date">Data</string>
     <string name="go_button">Ir</string>

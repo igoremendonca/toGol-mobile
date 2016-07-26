@@ -7,4 +7,6 @@ public class Constants {
 
     public static final String EVENT_KEY = "EVENT_KEY";
     public static final String COMPETITION_KEY = "COMPETITION_KEY";
+    public static final String PLACE_KEY = "COMPETITION_KEY";
+
 }
