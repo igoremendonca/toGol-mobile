@@ -5,4 +5,35 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="bpm.togol.MainActivity" />
+    tools:context="bpm.togol.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:padding="10dp"
+        android:layout_marginTop="60dp"
+        android:paddingRight="10dp"
+        android:background="@color/common_plus_signin_btn_text_light_disabled"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/place"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="@string/place"
+            android:layout_weight="0.95"
+            android:inputType="text"
+            android:drawableLeft="@drawable/ic_search"/>
+
+        <Button
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:text="@string/go_button"
+            android:layout_weight="0.05"/>
+    </LinearLayout>
+
+</fragment>

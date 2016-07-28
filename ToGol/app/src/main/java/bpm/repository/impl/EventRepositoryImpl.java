@@ -14,6 +14,8 @@ import bpm.util.DateUtil;
 
 import static bpm.model.enuns.SportIconEnum.FOOTBALL;
 import static bpm.model.enuns.SportIconEnum.SOCCER;
+import static bpm.model.enuns.SportIconEnum.TABLE_TENNIS;
+import static bpm.model.enuns.SportIconEnum.TENIS;
 import static bpm.model.enuns.SportIconEnum.VOLLEYBALL;
 
 /**
@@ -43,6 +45,24 @@ public class EventRepositoryImpl implements EventRepository {
 
 //##################################################################################################
 
+        Sport tenis = new Sport("Tenis", TENIS);
+        Competition competitionT = new Competition(tenis, "Joguinho amigável");
+        Team tt1 = new Team("Eliezer Rodrigues", tenis);
+        Team tt2 = new Team("Igor Mendonça", tenis);
+
+        EventLocation praia = new EventLocation(-18.933234, -48.291258);
+        praia.setPlace("Praia Club");
+        Game gamePraia = new Game();
+        gamePraia.setTeams(Arrays.asList(tt1, tt2));
+        gamePraia.setHour("19:00");
+
+        Event eventP = new Event();
+        eventP.setCompetition(competitionT);
+        eventP.setEventLocation(praia);
+        eventP.setDate(DateUtil.createDate(2016,5,2,"19:00"));
+        eventP.setGames(Arrays.asList(gamePraia));
+
+//##################################################################################################
         Sport futebol = new Sport("Futebol", SOCCER);
         Competition competition1 = new Competition(futebol, "Copa Futel de Futsal");
         Team t3 = new Team("JuntoMisturados", futebol);
@@ -96,6 +116,6 @@ public class EventRepositoryImpl implements EventRepository {
         event3.setDate(DateUtil.createDate(2016,5,2,"18:00"));
         event3.setGames(Arrays.asList(game3));
 
-        return Arrays.asList(event, event1, event2, event3);
+        return Arrays.asList(event, event1, event2, event3, eventP);
     }
 }
